@@ -107,7 +107,7 @@
     "custom_liquid_JHTccd": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "{% for image in product.images %}\n  <img src=\"{{ image.src | img_url: 'large' }}\" alt=\"{{ product.title }}\">\n{% endfor %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
